@@ -1,10 +1,10 @@
 " Store all custom shortcuts here so there is one location to reference
 
 " Fuzzy-finder shortcuts
-nnoremap <Space> :CtrlP<CR>
-nnoremap <Leader>b :CtrlPBuffer<CR>
-nnoremap <Leader>t :CtrlPTag<CR>
-nnoremap <Leader><Space> :CtrlPClearCache<CR>:CtrlP<CR>
+nnoremap <Space> :CommandT<CR>
+nnoremap <Leader>b :CommandTBuffer<CR>
+nnoremap <Leader>t :CommandTTag<CR>
+nnoremap <Leader><Space> :CommandTFlush<CR>:CommandT<CR>
 nnoremap <Leader>? :FufHelp<CR>
 
 " Open alternate/associated files (e.g. headers or specs)
@@ -20,7 +20,7 @@ nnoremap <Leader>c :let &scrolloff=999-&scrolloff<CR><CR>
 nnoremap <Leader>f :NERDTreeToggle<CR><CR>
 
 " Turn off search highlights until next search
-nnoremap <Leader>h :nohlsearch<CR><CR>
+nnoremap <CR> :nohlsearch<CR><CR>
 
 " Show/hide line numbers
 nnoremap <Leader>l :set number!<CR><CR>
@@ -62,7 +62,7 @@ nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gx :Gremove<CR>
 
 " GitGutter shortcuts
-nnoremap <Leader>gh :ToggleGitGutter<CR>
+nnoremap <Leader>gh :GitGutterToggle<CR>
 nnoremap <Leader>gn :GitGutterNextHunk<CR>
 nnoremap <Leader>gp :GitGutterPrevHunk<CR>
 

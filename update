@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+WDIR=`dirname $0`
+
 is_commit_hash() {
   case $1 in
     ( *[!0-9A-Fa-f]* | "" ) return 1 ;;
@@ -11,7 +13,7 @@ is_commit_hash() {
 
 # Installs and ensures all plugins are up-to-date
 update_plugins () {
-  local bundle_dir='bundles'
+  local bundle_dir=$WDIR/bundles
   mkdir -p "$bundle_dir"
 
   while read url revision; do
@@ -34,10 +36,10 @@ update_plugins () {
     else
       git clone $url "$plugin_dir"
     fi
-  done < plugins.list
+  done < $WDIR/plugins.list
 
   for plugin_name in `ls $bundle_dir`; do
-    if [ $(grep -cF $plugin_name plugins.list) -eq 0 ]; then
+    if [ $(grep -cF $plugin_name $WDIR/plugins.list) -eq 0 ]; then
       echo "Removing '$plugin_name' since it is not in plugins.list"
       rm -rf "$bundle_dir/$plugin_name"
     fi
