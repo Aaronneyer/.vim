@@ -3,3 +3,6 @@ nnoremap Y y$
 
 " Allow backspace to always delete
 set backspace=eol,indent,start
+
+vmap <tab>   >gv
+vmap <S-tab> <gv
