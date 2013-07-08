@@ -18,3 +18,4 @@ nnoremap <C-p>   :tabprev<CR>
 nnoremap <C-n>   :tabnext<CR>
 nnoremap <tab>   :tabnext<CR>
 nnoremap <S-tab> :tabprev<CR>
+nnoremap qq      :quit<CR>
