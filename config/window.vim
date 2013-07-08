@@ -8,7 +8,7 @@ nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
 
 " Resize windows using +/-
-nnoremap = <C-w>+
+nnoremap + <C-w>+
 nnoremap - <C-w>-
 
 " Quick tab window creation/navigation
