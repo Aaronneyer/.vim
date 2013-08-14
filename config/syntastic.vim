@@ -18,3 +18,6 @@ let g:syntastic_loc_list_height = 5
 
 " Only run checkers on save, not save & quit
 let g:syntastic_check_on_wq = 0
+
+" Only use syntastic when I tell it to
+let g:syntastic_mode_map = {'mode': 'passive'}
