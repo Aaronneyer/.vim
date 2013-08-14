@@ -13,7 +13,7 @@ is_commit_hash() {
 
 # Installs and ensures all plugins are up-to-date
 update_plugins () {
-  local bundle_dir=$WDIR/bundles
+  local bundle_dir=$WDIR/bundle
   mkdir -p "$bundle_dir"
 
   while read url revision; do
