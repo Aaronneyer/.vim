@@ -3,11 +3,16 @@
 This is my `.vim` directory, containing all my configurations for `vim` and the
 associated plugins I use.
 
+This was forked from sds/.vim and then heavily modified for my own use.
+
+This can be used by itself or along with the rest of my
+[dotfiles](https://github.com/Aaronneyer/dotfiles).
+
 ## Installation
 
 Clone the repository:
 
-    git clone git://github.com/sds/.vim.git ~/.vim
+    git clone git://github.com/Aaronneyer/.vim.git ~/.vim
 
 Add a symlink to `init.vim`...
 
@@ -30,9 +35,8 @@ that it only updates when you change the revision.
 
 ## Configuration
 
-Configuration files are broken up into various categories in the `config`
-directory, including settings for individual plugins (if you're familiar with
-the directory layout for `vim`, `config` replaces the `plugin` directory).
+Configuration files are broken up into various categories in the `plugin`
+directory, including settings for individual plugins.
 
 The `after`, `autoload`, `ftdetect`, `ftplugin`, and `indent` directories
 act in the way `vim` normally uses them. To summarize:
@@ -62,18 +66,6 @@ all the plugins.
 
 To remove a plugin, simply remove it from `plugins.list` and run the
 `update` script.
-
-### Why not use submodules?
-
-When I was first exposed to using submodules for managing plugins with
-Pathogen, I found them clunky and annoying. For example, the documentation tag
-files would dirty the working tree, even though I didn't care that the tree of
-the submodule was dirty.
-
-While better alternatives may exist (I believe you can ignore dirty trees in
-submodules from the containing repository with a recent version of git), I find
-the approach of explicitly listing your plugins in a file and running a script
-simpler and cleaner.
 
 ## License
 
