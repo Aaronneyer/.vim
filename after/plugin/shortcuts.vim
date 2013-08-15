@@ -2,10 +2,7 @@
 
 " Fuzzy-finder shortcuts
 nnoremap <Space> :CommandT<CR>
-nnoremap <Leader>b :CommandTBuffer<CR>
-nnoremap <Leader>t :CommandTTag<CR>
 nnoremap <Leader><Space> :CommandTFlush<CR>:CommandT<CR>
-nnoremap <Leader>? :FufHelp<CR>
 
 " Open alternate/associated files (e.g. headers or specs)
 nnoremap <Leader>aa :A<CR><CR>
@@ -13,14 +10,11 @@ nnoremap <Leader>a- :AS<CR><CR>
 nnoremap <Leader>a\ :AV<CR><CR>
 nnoremap <Leader>at :AT<CR><CR>
 
-" Center cursor vertically
-nnoremap <Leader>c :let &scrolloff=999-&scrolloff<CR><CR>
-
 " Show/hide file tree viewer
 nnoremap <Leader>f :NERDTreeToggle<CR><CR>
 
 " Turn off search highlights until next search
-nnoremap <CR> :nohlsearch<CR><CR>
+nnoremap <CR> :nohlsearch<CR>:<backspace>
 
 " Show/hide line numbers
 nnoremap <Leader>l :set number!<CR><CR>
@@ -40,9 +34,6 @@ nnoremap <C-\> <C-W>v
 nnoremap <Leader>w :set wrap!<CR><CR>
 
 nnoremap <Leader>x :close<CR>
-
-" Copy Vim paste register to local system clipboard via Clipper
-nnoremap <C-y> :call system('nc localhost 8377', @0)<CR><CR>
 
 " Show/hide hidden characters (newlines, spaces, etc.)
 nnoremap <Leader>` :set nolist!<CR><CR>
@@ -66,15 +57,6 @@ nnoremap <Leader>gh :GitGutterToggle<CR>
 nnoremap <Leader>gn :GitGutterNextHunk<CR>
 nnoremap <Leader>gp :GitGutterPrevHunk<CR>
 
-" Convert Ruby 1.8 hashes to 1.9 style
-nmap <Leader>rh :%s/\v(:)@<!:([a-zA-Z_][a-zA-Z_0-9]*)(\s*)\=\>\s?/\2:\3/gc<CR>
-vmap <Leader>rh :s/\v(:)@<!:([a-zA-Z_][a-zA-Z_0-9]*)(\s*)\=\>\s?/\2:\3/gc<CR>
-
 " Switch between single and double quotes with surround.vim (uses `z marker)
-" NOTE: we explicitly set a temporary marker (z) and restore
-"       it after the surround operation because otherwise the
-"       surround plugin will move the cursor to the opening
-"       quote of the operand after the operation, instead of
-"       keeping the cursor where it was before the operation
 nmap <Leader>' mzcs"'`z
 nmap <Leader>" mzcs'"`z
