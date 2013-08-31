@@ -1,8 +1,12 @@
 " Store all custom shortcuts here so there is one location to reference
 
 " Fuzzy-finder shortcuts
-nnoremap <Space> :CommandT<CR>
-nnoremap <Leader><Space> :CommandTFlush<CR>:CommandT<CR>
+if has('ruby')
+  nnoremap <Space> :CommandT<CR>
+  nnoremap <Leader><Space> :CommandTFlush<CR>:CommandT<CR>
+else
+  nnoremap <Space> :CtrlP<CR>
+endif
 
 " Open alternate/associated files (e.g. headers or specs)
 nnoremap <Leader>aa :A<CR><CR>
