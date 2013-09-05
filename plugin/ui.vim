@@ -1,7 +1,5 @@
 syntax on
 
-set shortmess+=I " Don't show Vim credits on startup
-
 set cursorline     " Highlight currently focused line
 set cursorcolumn
 let &colorcolumn="80,".join(range(100,999),",")

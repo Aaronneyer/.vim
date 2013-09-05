@@ -8,12 +8,6 @@ else
   nnoremap <Space> :CtrlP<CR>
 endif
 
-" Open alternate/associated files (e.g. headers or specs)
-nnoremap <Leader>aa :A<CR><CR>
-nnoremap <Leader>a- :AS<CR><CR>
-nnoremap <Leader>a\ :AV<CR><CR>
-nnoremap <Leader>at :AT<CR><CR>
-
 " Show/hide file tree viewer
 nnoremap <Leader>f :NERDTreeToggle<CR><CR>
 
@@ -60,7 +54,3 @@ nnoremap <Leader>gx :Gremove<CR>
 nnoremap <Leader>gh :GitGutterToggle<CR>
 nnoremap <Leader>gn :GitGutterNextHunk<CR>
 nnoremap <Leader>gp :GitGutterPrevHunk<CR>
-
-" Switch between single and double quotes with surround.vim (uses `z marker)
-nmap <Leader>' mzcs"'`z
-nmap <Leader>" mzcs'"`z
