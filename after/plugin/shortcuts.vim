@@ -17,8 +17,9 @@ nnoremap <CR> :nohlsearch<CR>:<backspace>
 " Show/hide line numbers
 nnoremap <Leader>l :set number!<CR><CR>
 
-" Toggle paste mode (which disables auto-indenting and line wrapping)
-nnoremap <Leader>p :setlocal paste!<CR><CR>
+" Copy and paste to and from clipboard
+vnoremap <Leader>y "+yi
+nnoremap <Leader>p "+p
 
 " Intuitive incr/decrement of numbers
 nnoremap + <C-A>
